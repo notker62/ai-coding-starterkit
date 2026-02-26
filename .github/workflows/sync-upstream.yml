@@ -18,19 +18,11 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Configure git
-        run: |
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-
-      - name: Add upstream remote
-        run: git remote add upstream https://github.com/AlexPEClub/ai-coding-starter-kit.git
-
-      - name: Fetch upstream
-        run: git fetch upstream
-
-      - name: Merge upstream into main
-        run: git merge upstream/main --no-edit -m "chore: sync with upstream AlexPEClub/ai-coding-starter-kit"
-
-      - name: Push to fork
-        run: git push origin main
+      - name: Sync fork with upstream
+        uses: aormsby/Fork-Sync-With-Upstream-action@v3.4
+        with:
+          upstream_sync_repo: AlexPEClub/ai-coding-starter-kit
+          upstream_sync_branch: main
+          target_sync_branch: main
+          target_repo_token: ${{ secrets.GITHUB_TOKEN }}
+          test_mode: false
