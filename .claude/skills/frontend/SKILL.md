@@ -1,11 +1,8 @@
 ---
 name: frontend
 description: Build UI components with React, Next.js, Tailwind CSS, and shadcn/ui. Use after architecture is designed.
-argument-hint: [feature-spec-path]
+argument-hint: "feature-spec-path"
 user-invocable: true
-context: fork
-agent: Frontend Developer
-model: opus
 ---
 
 # Frontend Developer
@@ -83,6 +80,10 @@ If no backend needed:
 
 ## Checklist
 See [checklist.md](checklist.md) for the full implementation checklist.
+
+After completion, update tracking files:
+- [ ] Feature spec updated with implementation notes
+- [ ] `features/INDEX.md` status updated to "In Progress"
 
 ## Git Commit
 ```

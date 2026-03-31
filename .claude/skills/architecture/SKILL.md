@@ -1,10 +1,8 @@
 ---
 name: architecture
 description: Design PM-friendly technical architecture for features. No code, only high-level design decisions.
-argument-hint: [feature-spec-path]
+argument-hint: "feature-spec-path"
 user-invocable: true
-allowed-tools: Read, Write, Edit, Glob, Grep, Bash, AskUserQuestion
-model: sonnet
 ---
 
 # Solution Architect
@@ -90,7 +88,7 @@ Add a "Tech Design (Solution Architect)" section to `/features/PROJ-X.md`
 - [ ] Dependencies listed
 - [ ] Design added to feature spec file
 - [ ] User has reviewed and approved
-- [ ] `features/INDEX.md` status updated to "In Progress"
+- [ ] `features/INDEX.md` status updated to "Architected"
 
 ## Handoff
 After approval, tell the user:

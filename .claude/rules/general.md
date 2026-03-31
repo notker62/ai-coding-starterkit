@@ -48,7 +48,13 @@ After completing work on any feature, you MUST update tracking files. Follow thi
 
 **What to update in `features/INDEX.md`:**
 - Feature status column must match the feature spec header
-- Valid statuses: Planned, In Progress, In Review, Deployed
+- Valid statuses: Planned → Architected → In Progress → In Review → Approved → Deployed
+  - **Planned**: after `/requirements`
+  - **Architected**: after `/architecture`
+  - **In Progress**: after `/frontend` or `/backend` starts
+  - **In Review**: after `/qa` starts
+  - **Approved**: after `/qa` passes (no critical/high bugs)
+  - **Deployed**: after `/deploy`
 
 **NEVER do this:**
 - Do NOT say "I've updated the feature spec" without actually calling the Edit tool
